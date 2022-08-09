@@ -4,6 +4,7 @@
         grid-column: full-start / col-end 4;
 
         background-image: linear-gradient(rgba($color-primary, 0.5), rgba($color-primary, 0.5)), url(/src/img/back.jpg);
+        background-size: cover;
 
         display: grid;
         grid-template-columns: repeat(6, 1fr);
