@@ -6,13 +6,13 @@
     display: flex;
     align-items: start;
     justify-content: center;
+    padding-top: 1.5rem;
 
     &__nav-btn {
         border: none;
         border-radius: 0;
         cursor: pointer;
         background-color: inherit;
-        margin-top: 2rem;
         padding: 1rem 0;
         span {
             display: block;
@@ -24,22 +24,20 @@
                 margin-bottom: 0;
             }
         }
-
-        // &::after,
-        // &::before {
-        //     content: "";
-        //     display: block;
-        //     background-color: #fff;
-        //     height: 2px;
-        //     width: 4.5rem;
-        // }
-
-        // &::after {
-        //     transform: translateY(-1.5rem);
-        // }
-
-        // &::before {
-        //     transform: translateY(1.5rem);
-        // }
+    }
+}
+@media (max-width: $bp-large) {
+    .sidebar {
+        grid-column: 1/ -1;
+        grid-row: 1/2;
+        padding-top: 0;
+        padding-right: 2rem;
+        align-items: center;
+        justify-content: end;
+        &__nav-btn {
+            span {
+                margin-bottom: 0.8rem;
+            }
+        }
     }
 }

@@ -13,6 +13,13 @@ $color-grey-dark-2: #6d5d4b;
 $font-primary: "Nunito", sans-serif;
 $font-display: "Josefin Sans", sans-serif;
 
+// responsive breakpoints
+
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000 px
+$bp-medium: 50em; //  800px
+$bp-small: 37.5em; //  600px
+
 *,
 *:before,
 *:after {
@@ -30,4 +37,10 @@ body {
     color: $color-grey-dark-2;
     font-weight: 300;
     line-height: 1.6;
+}
+
+@media (max-width: $bp-largest) {
+    html {
+        font-size: 50%; // 8px = 1rem
+    }
 }
