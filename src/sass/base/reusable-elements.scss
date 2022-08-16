@@ -3,7 +3,7 @@
 .title-3,
 .title-4 {
     font-family: $font-display;
-    font-waight: 400;
+    font-weight: 400;
 }
 
 .title-1 {
@@ -56,4 +56,8 @@
     &:hover {
         background-color: $color-primary-dark;
     }
+}
+
+.noScroll {
+    overflow: hidden;
 }

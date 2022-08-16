@@ -8,7 +8,7 @@
     justify-content: center;
     padding-top: 1.5rem;
 
-    &__nav-btn {
+    &__menu-switcher {
         border: none;
         border-radius: 0;
         cursor: pointer;
@@ -22,6 +22,44 @@
             margin-bottom: 1rem;
             &:last-of-type {
                 margin-bottom: 0;
+            }
+        }
+    }
+
+    &__menu {
+        z-index: 1001;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        padding: 15rem 5rem 0 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+
+        visibility: hidden;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
+        &-active {
+            visibility: visible;
+        }
+
+        &-list {
+            background-color: #fff;
+            padding: 6rem;
+            text-align: center;
+            z-index: 1;
+            border-radius: 0.8rem;
+            font-size: 2rem;
+            list-style-type: none;
+        }
+
+        &-item {
+            a {
+                color: $color-primary;
+                text-decoration: none;
+                font-weight: 600;
             }
         }
     }
@@ -40,4 +78,7 @@
             }
         }
     }
+}
+
+@media (max-width: $bp-small) {
 }
