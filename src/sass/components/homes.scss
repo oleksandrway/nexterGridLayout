@@ -3,7 +3,7 @@
     margin: 15rem 0;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
     gap: 7rem;
 }
 
@@ -19,13 +19,13 @@
         grid-row: 1/2;
         z-index: 1;
         width: 100%;
+        display: inline;
 
         margin-bottom: 2.5rem;
         position: relative;
         &::before {
             content: "";
             background-image: linear-gradient(to left bottom, rgba(#fff, 0.15), rgba(#fff, 0));
-
             display: block;
             width: 100%;
             height: 100%;
@@ -37,18 +37,20 @@
 
         img {
             width: 100%;
+            height: 100%;
         }
     }
 
     &__like {
         grid-column: 2 / 3;
         grid-row: 1/2;
-        fill: $color-primary;
         height: 2.5rem;
         width: 2.5rem;
         z-index: 2;
         justify-self: end;
         margin: 1rem;
+
+        fill: $color-primary;
     }
 
     &__name {
@@ -56,27 +58,31 @@
         grid-row: 1/2;
         z-index: 2;
         align-self: end;
+        padding: 1.25rem;
+        width: 80%;
+        justify-self: center;
+
+        white-space: nowrap;
 
         font-family: $font-display;
         font-size: 1.6rem;
         text-align: center;
-        padding: 1.25rem;
         background-color: $color-secondary;
         font-weight: 400;
-        width: 80%;
-        justify-self: center;
     }
 
     &__location,
     &__rooms,
     &__area,
     &__price {
-        display: flex;
-        align-items: center;
-        font-size: 1.5rem;
         margin-left: 1rem;
         margin-left: 2rem;
         padding: 0 1rem 0 2rem;
+
+        word-break: break-word;
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
         svg {
             fill: $color-primary;
             height: 2rem;
